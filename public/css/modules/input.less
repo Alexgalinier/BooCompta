@@ -1,0 +1,27 @@
+.base() {
+    input[type="text"], input[type="password"], select {
+        padding: 6px 10px;
+        background: white;
+        color: rgb(150,150,150);
+        outline: 0;
+        border: 1px solid rgb(150,150,150);
+        outline: none;
+        
+        &:focus {
+            color: black;
+            background: white;
+            box-shadow: 0 0 10px rgb(0, 180, 255);
+        }
+    }
+
+    input[type="button"], input[type="submit"] {
+        padding: 6px 10px;
+        border: none;
+        .selected;
+    }
+    
+    a, a:focus, a:visited, a:active, a:hover {
+        color: #333;
+        text-decoration: none;
+    }
+}

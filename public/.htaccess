@@ -1,0 +1,22 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+#----------------------------------------------------------------
+# View url
+#----------------------------------------------------------------
+RewriteRule ^login$ index.php?route=Login [L]
+RewriteRule ^logout$ index.php?route=Login&logout=1 [L]
+RewriteRule ^dashboard$ index.php?route=Dashboard [L]
+RewriteRule ^collab/?([0-9]*)$ index.php?route=Collab&who=$1 [L]
+RewriteRule ^rempla$ index.php?route=Rempla [L]
+
+#----------------------------------------------------------------
+# Ressources
+#----------------------------------------------------------------
+RewriteRule ^(.*)/prestations/([0-9]+)/delete$ index.php?route=Main&action=delete&type=prestation&id=$2&current_route=$1 [L]
+RewriteRule ^(.*)/payment/([0-9]+)/delete$ index.php?route=Main&action=delete&type=payment&id=$2&current_route=$1 [L]
+RewriteRule ^(.*)/charge/([0-9]+)/delete$ index.php?route=Main&action=delete&type=charge&id=$2&current_route=$1 [L]
+RewriteRule ^(.*)/prev_month$ index.php?route=Main&action=prev_month&current_route=$1 [L]
+RewriteRule ^(.*)/next_month$ index.php?route=Main&action=next_month&current_route=$1 [L]
+RewriteRule ^(.*)/change_date$ index.php?route=Main&action=change_date&current_route=$1 [L]
+RewriteRule ^(.*)/export/(.*)$ index.php?route=Main&action=export&type=$2 [L]

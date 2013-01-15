@@ -1,0 +1,35 @@
+.side() {
+    #logout {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        padding: 6px 14px;
+        font-weight: bold;
+        background: rgb(237,237,237);
+        z-index: 2;
+        
+        &:hover {
+            .selected;
+        }
+    }
+    
+    #side {
+        position: absolute;
+        width: 180px;
+        top: 15px;
+        left: 15px;
+        
+        a {
+            display: block;
+            background: @bg-gray;
+            padding: 6px 10px;
+            font-family: Arial;
+            margin-bottom: 1px;
+            cursor: pointer;
+            
+            &.menu-selected {
+                .selected;   
+            }
+        }
+    }
+}

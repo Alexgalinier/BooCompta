@@ -1,0 +1,54 @@
+.collab() {
+     #who {
+        a {
+            padding: 10px 16px;
+            cursor: pointer;
+            display: inline-block;
+            
+            &.current {
+                background: @bg-gray;
+                font-weight: bold;
+            }
+        }
+    }
+
+    #add-row-content.collab-row {
+        .sep {
+            padding: 0 10px;
+            font-size: 1.2em;
+            color: rgb(200,200,200);
+        }
+
+        label {
+            margin: 0;
+        }
+    }
+
+    .table-actions {
+        tr:first-child td {
+            padding-bottom: 10px;
+        }
+
+        td {
+            text-align: left;
+            vertical-align: middle;
+            padding: 0px 10px;
+        }
+    }
+
+    .prestations-unpaid, .prestations-paid, .payments {
+        width: 32%;
+        float: left;
+        margin: 0;
+        margin-right: 2%;
+    }
+
+    .paid-tier-pay {
+        padding: 1px 5px;
+        .selected;
+    }
+    
+    .payments {
+        margin-right: 0;
+    }
+}
